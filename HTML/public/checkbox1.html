@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .para{
+            overflow: auto;
+            width: 300px;
+            height: 200px;
+            border: 2px;
+            border-color: black;
+            border-style: solid;
+        }
+        .container{
+            display: block;
+            padding: 10px;
+        }
+        div{
+            margin-bottom: 20px;
+        }
+        .terms+span{
+            color: red;
+        }
+        .terms:checked + span{
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <div class="container"> 
+        <div class="para">
+            <p>You can use our services in a variety of ways to manage your privacy. For example, you can sign up for a Google Account if you want to create and manage content like emails and photos, or see more relevant search results. And you can use many Google services when you’re signed out or without creating an account at all, like searching on Google or watching YouTube videos. You can also choose to browse the web in a private mode, like Chrome Incognito mode, which helps keep your browsing private from other people who use your device. And across our services, you can adjust your privacy settings to control whether we collect some types of data and how we use it.
+
+            </p>
+            
+        </div>
+            <div>
+                <input class="terms" type="checkbox">
+                <span>I accept</span>
+            </div>
+        </div>
+        
+    </form>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Web Devlopment | Rishikesh </title>
+    <link rel="shortcut icon" href="../images/school.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Best Full Stack developement website">
+    <meta name="description" content="Full Stack developement study and practice">
+    <style>
+        #childlist{
+            display: flex;
+        }
+        li{
+            margin-right: 25px;
+        }
+        #childlist2{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+        #childlist3{
+            columns:2;
+        }
+    </style>
+</head>
+<body>
+    <ol type="i">
+        <li>HTML - Nested order example
+            <ol id="childlist">
+                <li>Head Section</li>
+                <li>Body Section</li>
+                <li>Header section </li>
+                <li>Footer section </li>
+            </ol>
+        </li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React
+            <ol type="a" id="childlist2">
+                <li>React chapter-1</li>
+                <li>React chapter-2</li>
+                <li>React chapter-3</li>
+                <li>React chapter-4</li>
+            </ol>
+        </li>
+        <li>Angular
+            <ol type="i" id="childlist3">
+                <li>Angular chapter-1</li>
+                <li>Angular chapter-2</li>
+                <li>Angular chapter-3</li>
+                <li>Angular chapter-4</li>
+            </ol>
+        </li>
+    </ol>
+</body>
+</html>

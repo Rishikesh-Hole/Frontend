@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextBox | Rishikesh Web </title>
+</head>
+<body>
+    <form 
+    method="get" 
+    >
+        <h2>Register yourself</h2>
+        <dl>
+            <dt>User Name</dt>
+            <dd>
+                <input type="text" name="userName">
+            </dd>
+            <dt>Password</dt>
+            <dd>
+                <input type="text" name="passowrd" >
+            </dd>
+            <dt>Place</dt>
+            <dd>
+                <input type="text" name="place" list="cities">
+            </dd>
+            
+        </dl>
+        <button>Submit</button>
+    </form>
+    <datalist id="cities">
+        <option>Pune</option>
+        <option>Solapur</option>
+        <option>Satara</option>
+        <option>Sangali</option>
+    </datalist>
+</body>
+</html>
