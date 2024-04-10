@@ -1,0 +1,31 @@
+@function setBorder($size){
+    @return $size solid green;
+}
+
+@mixin ImageEffects($start, $end){
+    @for $i from $start through $end{
+        .box-#{$i}{
+            width: 250px;
+            margin-left: $i * 100px;
+            margin-bottom: 20px;
+            box-shadow: 3px 3px 3px green
+        }
+        .box-#{$i} img{
+            border: setBorder(5px);
+            border-radius: 10px;
+            padding: 5px;
+            width: 90%;
+            height: 90%;
+        }
+        @if $i==1{
+            .box-1{
+                 float: right;
+                 box-shadow: 3px 3px 3px red;
+            }
+        }
+    }
+   
+}
+
+@include ImageEffects(1, 3);
+

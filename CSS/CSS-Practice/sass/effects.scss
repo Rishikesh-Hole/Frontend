@@ -1,0 +1,16 @@
+$shadow: 3px 3px 3px yellow;
+$border:3px solid red;
+.container{
+    border: $border;
+    padding: 10px;
+    h2{
+        text-align: center;
+        text-shadow: $shadow;
+        word-spacing: 20px;
+        color: red;
+    }
+    p{
+        color: blue;
+        border: $border;
+    }
+}

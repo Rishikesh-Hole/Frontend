@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            display: flex;
+            list-style: none;
+        }
+        li::after{
+            content: "-->";
+        }
+        li:last-child::after{
+            content: "";
+        }
+        li::before{
+            content: "/";
+        }
+        li:first-child:before{
+            content: "";
+        }
+        p::selection{
+            color: yellow;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+        <li>Item4</li>
+        <li>Item5</li>
+    </ul>
+    <p>Library can build application but can't control application flow.Library can build application but can't control application flow.Library can build application but can't control application flow.Library can build application but can't control application flow.Library can build application but can't control application flow.</p>
+</body>
+</html>

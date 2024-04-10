@@ -1,0 +1,44 @@
+$themeColor:green;
+$borderSize:10px;
+
+@if $themeColor==red{
+    .container{
+        box-shadow: 3px 3px 3px rgb(238, 167, 167);
+        padding: 20px;
+        h2{
+            color: rgb(212, 38, 38);
+            border:$borderSize solid $themeColor;
+        }
+        p{
+            color: rgb(179, 92, 92);
+            border:$borderSize - 5 solid $themeColor;
+        }
+    }
+}
+
+@else if $themeColor==green{
+    .container{
+        box-shadow: 3px 3px 3px rgb(82, 236, 82);
+        padding: 20px;
+        h2{
+            color: rgb(14, 100, 14);
+            border:$borderSize solid $themeColor;
+        }
+        p{
+            color: rgb(42, 133, 42);
+            border:$borderSize - 5 solid $themeColor;
+        }
+    }
+}
+@else{
+    .container{
+        box-shadow: 3px 3px 3px $themeColor;
+        padding: 20px;
+        h2{
+            color:$themeColor;
+        }
+        p{
+            color:$themeColor;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css translate and scale</title>
+    <style>
+        #img-1:hover{
+            transform: translate(500px,400px);
+            transition: 2s;
+        }
+        #img-1{
+            transition: 1s;
+        }
+        #img-2:hover{
+            border: 2px solid black;
+            transform: scale(1.5);
+            transition: 2s;
+        }
+        #img-2{
+            display: block;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <img id="img-1" src="../images/Harrier.PNG" width="200px" height="200px">
+    <img id="img-2" src="../images/bag.PNG" width="200px" height="200px">
+</body>
+</html>

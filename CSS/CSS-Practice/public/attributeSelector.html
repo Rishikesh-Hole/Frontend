@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Attribute Selector </title>
+    <style>
+        input[type]{
+            background-color: red;
+            border: 2px solid black;
+        }
+        input[type="checkbox"]+span{
+            display: inline;
+        }
+        input[type="checkbox"]:checked+span{
+            display: none;
+        }
+        p[id^="Effects"]{
+            color: red;
+        }
+        p[id$="Effects1"]{
+            color: green;
+        }
+        p[id~="this"]{
+            color: blue;
+        }
+        p[id|="that"]{
+            color: tomato;
+        }
+    </style>
+</head>
+<body>
+    Input-1 text: <input type="text"> <br>
+    Input-2 checkbox: <input type="checkbox"> <span>Please check it!!</span><br>
+    Input-3 number:  <input type="number"> <br>
+    Input-4 radio: <input type="radio"> <br>
+    <p id="Effects">Para-1</p>
+    <p id="EffectsText">Para-2</p>
+    <p id="TextEffects1">Para-3</p>
+    <p id="AnnimateEffectsText">Para-4</p>
+    <p id="Effects Text">Para-5</p>
+    <p id="Effects-Text">Para-6</p>
+    <p id="Effects this Text">Para-7</p>
+    <p id="Effect sthis">Para-8</p>
+    <p id="Effect s this">Para-9</p>
+    <p id="that">Para-10</p>
+    <p id="that-effect">Para-11</p>
+    <p id="123that">Para-12</p>
+    <p id="effect-that">Para-13</p>
+</body>
+</html>

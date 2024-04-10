@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Inheritance</title>
+    <style>
+        #parent{
+            border: 3px solid black;
+            padding: 10px;
+            font-size: 30px;
+            color: blue;
+        }
+        #child-1{
+            border: inherit;
+            color: initial;
+            padding: inherit;
+            font-size: 15px;
+        }
+        #child-2{
+            all:inherit;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        Parent text
+        <div id="child-1">
+            Child-1 Text
+        </div>
+        <div id="child-2">
+            Child-2 Text
+        </div>
+    </div>
+</body>
+</html>

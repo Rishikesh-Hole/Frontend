@@ -1,0 +1,9 @@
+@import "variables";
+
+button{
+    border: $border;
+    background-color: tomato;
+    color: white;
+    padding: $padding;
+    font-size: 20px;
+}

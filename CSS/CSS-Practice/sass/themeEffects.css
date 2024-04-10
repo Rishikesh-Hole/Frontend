@@ -1,0 +1,14 @@
+.container {
+  box-shadow: 3px 3px 3px rgb(82, 236, 82);
+  padding: 20px;
+}
+.container h2 {
+  color: rgb(14, 100, 14);
+  border: 10px solid green;
+}
+.container p {
+  color: rgb(42, 133, 42);
+  border: 5px solid green;
+}
+
+/*# sourceMappingURL=themeEffects.css.map */

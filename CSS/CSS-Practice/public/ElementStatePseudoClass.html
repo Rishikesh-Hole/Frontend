@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element State Psuedo Classes</title>
+    <style>
+        #input1+span{
+            display: none;
+        }
+        #input1:focus+span{
+            display: inline;
+        }
+        #input2:read-only{
+            background-color: aquamarine;
+        }
+        #input3:enabled+span{
+            display: none;
+        }
+        #input3:disabled+span{
+            display: inline;
+        }
+        #input4+span{
+            display: none;
+        }
+        #input4:checked+span{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    Input-1 <input type="text" id="input1"> <span>Please enter user name</span><br>
+    Input-2 <input type="text" id="input2" value="readonly" readonly> <br>
+    Input-3 <input type="text"  id="input3" disabled > <span>You cann't modify. Its disabled</span><br>
+    Input-4 <input type="checkbox" id="input4"><span> You have selected the checkbox!!</span>
+</body>
+</html>

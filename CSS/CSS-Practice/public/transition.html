@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            
+        }
+        img:hover{
+            transform: scale(2);
+            transition-duration: 2s;
+            transition-delay: 2s;
+            transition-timing-function:steps(3);
+        }
+        img{
+            transition-duration: 2s;
+            transition-timing-function:steps(2);
+        }
+        .box{
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+        }
+        .box:hover{
+            background-color: red;
+            width: 800px;
+            height: 100px;
+            transition-duration: 3s;
+            transition-property: width;
+            transition-timing-function:ease-in;
+        }
+    </style>
+</head>
+<body class="container">
+    
+    <img src="../images/jacket.PNG" width="200px" height="200px">
+    <div class="box">
+
+    </div>
+</body>
+</html>

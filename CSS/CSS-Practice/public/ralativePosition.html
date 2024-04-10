@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Position</title>
+    <style>
+        #parent{
+            border: 2px solid black;
+            width: 500px;
+            height: 500px;
+        }
+        #child-1{
+            position: relative;
+            border: 2px dotted green;
+            width: 100px;
+            height: 100px;
+            top:50px;
+            left:150px;
+        }
+        #child-2{
+            position: absolute;
+            border: 2px dotted red;
+            width: 100px;
+            height: 100px;
+            top:20px;
+            left:150px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        Parent Box
+        <div id="child-1">
+            Child Box-1: relative
+        </div>
+        <div id="child-2">
+            Child Box-2: absolute
+        </div>
+    </div>
+</body>
+</html>

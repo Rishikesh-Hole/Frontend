@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframe</title>
+    <style type="text/css">
+        .container{
+            overflow: hidden;
+            height: 500px;
+            border: 2px solid black;
+        }
+        @keyframes slideInd{
+            from{
+                margin-left: 120%;
+            }
+            25%{
+                transform: rotate(90deg);
+            }
+            50%{
+                transform: scale(2);
+            }
+            75%{
+                transform: skew(20deg);
+            }
+            to{
+                margin-left: 0%;
+            }
+        }
+        @keyframes welcome{
+            from{
+                margin-left: 20%;
+            }
+            to{
+                margin-left: 80%;
+            }
+        }
+        img{
+            animation-name: slideInd;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-direction:alternate;
+            animation-iteration-count: infinite;
+            animation-timing-function:ease-in;
+        }
+        h2{
+            animation-name: welcome;
+            animation-duration: 3s;
+            animation-direction:alternate;
+            animation-iteration-count: infinite;
+            animation-timing-function:ease-in;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="../images/endever.PNG" width="200px" height="200px">
+        <h2>Ford Endeavour</h2>
+    </div>
+</body>
+</html>

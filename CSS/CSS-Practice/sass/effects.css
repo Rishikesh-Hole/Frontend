@@ -1,0 +1,16 @@
+.container {
+  border: 3px solid red;
+  padding: 10px;
+}
+.container h2 {
+  text-align: center;
+  text-shadow: 3px 3px 3px yellow;
+  word-spacing: 20px;
+  color: red;
+}
+.container p {
+  color: blue;
+  border: 3px solid red;
+}
+
+/*# sourceMappingURL=effects.css.map */
