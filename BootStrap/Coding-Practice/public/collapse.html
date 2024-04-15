@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapse</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    
+</head>
+<body>
+    <button type="button" class="btn btn-primary m-3" data-bs-toggle="collapse" data-bs-target="#collapseEx1">
+        First-Card
+    </button>
+    <button type="button" class="btn btn-primary m-3" data-bs-toggle="collapse" data-bs-target="#collapseEx2">
+        Second-Card
+    </button>
+    <button type="button" class="btn btn-primary m-3" data-bs-toggle="collapse" data-bs-target=".multi-collapse">
+        Both-Card
+    </button>
+    <div class="row">
+        <div class="col-6">
+            <div class="collapse show multi-collapse" id="collapseEx1" >
+                <div class="card">
+                    <div class="card-body">
+                        <p>Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of formsExamples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="collapse fade multi-collapse" id="collapseEx2">
+                <div class="card">
+                    <div class="card-body">
+                        <p>Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of formsExamples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>

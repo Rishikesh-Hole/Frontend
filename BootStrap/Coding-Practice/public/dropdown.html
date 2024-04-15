@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Down</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    
+</head>
+<body>
+    <h2>Drop-Down</h2>
+    <div class="d-inline-block dropdown">
+        <button class="btn btn-primary  dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="false">Click Here</button>
+        <ul class="dropdown-menu">
+            <li><h5 class="dropdown-header" >dropdown-header</a></li>
+            <li><a class="dropdown-item" href="#">Home</a></li>
+            <li><a class="dropdown-item disabled" href="#">Disabled</a></li>
+            <li><a class="dropdown-item" href="#">Contact-us</a></li>
+            <li><a class="dropdown-item active" href="#">Active</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Separated Link</a></li>
+        </ul>
+    </div>
+    <div class="d-inline-block dropdown dropend">
+        <button class="btn btn-secondary  dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">Click Here</button>
+        <ul class="dropdown-menu">
+            <li><h5 class="dropdown-header" >dropdown-header</a></li>
+            <li><a class="dropdown-item" href="#">Home</a></li>
+            <li><a class="dropdown-item disabled" href="#">Disabled</a></li>
+            <li><a class="dropdown-item" href="#">Contact-us</a></li>
+            <li><a class="dropdown-item active" href="#">Active</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Separated Link</a></li>
+        </ul>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>
