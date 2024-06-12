@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parsing Tutorial</title>
+    <script text="type/javascript">
+      let str = "10";
+      document.write(`<h2>- String to parseInt:  parseInt(str1) - </h2>`);
+      let num = parseInt(str);
+      document.write(`<h2>${str} - ${typeof str}</h2>`);
+      document.write(`<h2>${num} - ${typeof num}</h2>`);
+      document.write(`<h2>parseInt("145.66")  = ${parseInt("145.66")} </h2>`);
+
+      document.write(`<h2>${num.toString()} - ${typeof toString(num)}</h2>`);
+      document.write(`<h2>- String to Boolean:  Boolean(str1) - </h2>`);
+      let str1 = "true";
+      let bool = Boolean(str1);
+      document.write(`<h2>${bool} - ${typeof bool}</h2>`);
+
+      document.write(`<h2>- String to parseFloat:  parseFloat(str1) - </h2>`);
+      let str2 = "123.054";
+      let float = parseFloat(str2);
+      document.write(`<h2>${float} - ${typeof float}</h2>`);
+
+      document.write(`<h2>- String to parseFloat:  Number(str1) - </h2>`);
+      let str3 = "123.054";
+      let str4 = "123";
+      let str5 = "123 abc";
+      let floatNumber = Number(str3);
+      let intNumber = Number(str4);
+      document.write(`<h2>${floatNumber} - ${typeof floatNumber}</h2>`);
+      document.write(`<h2>${intNumber} - ${typeof intNumber}</h2>`);
+      document.write(`<h2>Number("123 abc")  = ${Number(str5)} </h2>`);
+      document.write(`<h2>parseFloat("123 abc")  = ${parseFloat(str5)} </h2>`);
+      document.write(`<h2>parseInt("123 abc")  = ${parseInt(str5)} </h2>`);
+
+      document.write(`<h2>- String to Date:  Date(str1) - </h2>`);
+      document.write(`<h2>Date("2024-01-02")  = ${Date("2024-01-02")} </h2>`);
+
+      let jsonString = '{"name":"Rishikesh", "Age":31}';
+      let jObject = JSON.parse(jsonString);
+      document.write(
+        `<h2>JSON.parse(jsonString)  = ${JSON.parse(jsonString)} </h2>`
+      );
+      document.write(jObject.name);
+    </script>
+  </head>
+  <body></body>
+</html>

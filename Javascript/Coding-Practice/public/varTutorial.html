@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>var variables example</title>
+    <script type="text/javascript">
+      function varDemo() {
+        console.log(x); // Hoisting is allowed
+        var x = 10;
+        console.log(x);
+        document.write(`<h2>outer x = ${x}</h2>`);
+
+        var x = 30; // Shadowing in same scope not allowed
+        document.write(`<h2>Shodow outer x = ${x}</h2>`);
+
+        if (true) {
+          var y = 20;
+          var x = 30; // Shadowing in different scope allowed
+          console.log(y);
+          document.write(`<h2>Innner x = ${x}</h2>`);
+          document.write(`<h2>Inner y = ${y}</h2>`);
+        }
+        document.write(`<h2>Outer x = ${x}</h2>`);
+
+        console.log(y);
+      }
+
+      varDemo();
+    </script>
+  </head>
+  <body></body>
+</html>

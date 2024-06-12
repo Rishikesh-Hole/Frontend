@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>outerHTML Example</title>
+  </head>
+  <body>
+    <p id="GettingouterHTML">This is outerHTML example - Getting!!</p>
+    <h3 id="SettingouterHTML"></h3>
+    <p id="SettingouterHTML1"></p>
+
+    <script>
+      const element = document.querySelector("#GettingouterHTML");
+      const textContent = element.outerHTML;
+      console.log(element);
+
+      console.log("Text content:" + textContent);
+
+      const settingEx =
+        "<p>This is outerHTML (setting) example. replacing h3 by p</p>";
+
+      document.querySelector("#SettingouterHTML").outerHTML = settingEx;
+
+      document.querySelector("#SettingouterHTML1").outerHTML =
+        "<h3>Replacing p by H3</h3>";
+    </script>
+  </body>
+</html>

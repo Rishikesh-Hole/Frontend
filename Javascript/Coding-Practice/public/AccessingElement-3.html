@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using ID</title>
+    <script type="text/javascript">
+      "use strict";
+      function bodyLoad() {
+        document.getElementById("yourImg").src = "../imgs/Harrier.png";
+        document.getElementById("yourImg").width = "300";
+        document.getElementById("bntRegister").value = "Register";
+        document.getElementById("btnLogin").value = "Login";
+      }
+    </script>
+  </head>
+  <body onload="bodyLoad()">
+    <img alt="Image not available" id="yourImg" />
+
+    <form">
+      <h2>Register</h2>
+      <input type="text" />
+      <input type="button" id="bntRegister" />
+    </form>
+    <form>
+      <h2>Login</h2>
+      <input type="text" />
+      <input type="button" id="btnLogin" />
+    </form>
+  </body>
+</html>

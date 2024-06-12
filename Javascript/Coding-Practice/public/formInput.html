@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form-input example</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <script type="text/javascript">
+      function registerUser() {
+        document.getElementById("displayContainer").classList.add("d-block");
+        document.getElementById("iblFirstName").innerText =
+          document.getElementById("firstname").value;
+        document.getElementById("iblLastName").innerText =
+          document.getElementById("lastname").value;
+        document.getElementById("iblCity").innerText =
+          document.getElementById("city").value;
+        document.getElementById("iblCountry").innerText =
+          document.getElementById("country").value;
+        const isChecked = document.getElementById("adultcheck").checked;
+        if (isChecked) {
+          document.getElementById("iblAdult").innerText = "Adult";
+        } else {
+          document.getElementById("iblAdult").innerText = "Not Selected";
+        }
+        let selectedGender;
+        for (const radio of document.getElementsByName("gender")) {
+          if (radio.checked) {
+            selectedGender = radio.value;
+            break;
+          } else {
+            selectedGender = "Not Selected";
+          }
+        }
+        document.getElementById("iblGender").innerText = selectedGender;
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <form class="container-fluid">
+        <button
+          type="button"
+          class="btn btn-primary m-3"
+          data-bs-toggle="modal"
+          data-bs-target="#userRegisterID"
+        >
+          Register User
+        </button>
+        <div class="modal" id="userRegisterID">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4>User Registration</h4>
+              </div>
+              <div class="modal-body">
+                <label for="firstname" class="form-control-label"
+                  >First-Name:</label
+                >
+                <input type="text" id="firstname" class="form-control" />
+                <label for="lastname" class="form-control-label"
+                  >Last-Name:</label
+                >
+                <input type="text" id="lastname" class="form-control" />
+                <label for="city" class="form-control-label">City:</label>
+                <input type="text" id="city" class="form-control" />
+                <label class="form-control-label">
+                  Gender:
+                  <div class="form-check">
+                    <input
+                      type="radio"
+                      id="male"
+                      class="form-check-input"
+                      name="gender"
+                      value="Male"
+                    />
+                    <label for="male" class="form-control-label">Male</label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      type="radio"
+                      id="female"
+                      class="form-check-input"
+                      name="gender"
+                      value="Female"
+                    />
+                    <label for="male" class="form-control-label">Female</label>
+                  </div>
+                </label>
+                <br />
+                <label for="country">Country:</label>
+                <select name="country" id="country" class="mt-2">
+                  <option value="Not selected">Choose your country</option>
+                  <option value="India">India</option>
+                  <option value="USA">USA</option>
+                  <option value="UK">UK</option>
+                </select>
+                <div class="form-switch m-2">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="adultcheck"
+                  />
+                  <label for="adultcheck" class="form-control-label"
+                    >Adult</label
+                  >
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-dismiss="modal"
+                  onclick="registerUser()"
+                >
+                  Register
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  data-bs-dismiss="modal"
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div id="displayContainer" style="display: none" class="m-4">
+        <table
+          class="table caption-top table-striped table-hover w-50 table-bordered"
+        >
+          <caption>
+            Use details as below :
+          </caption>
+          <tr>
+            <th>First-Name</th>
+            <td id="iblFirstName">...</td>
+          </tr>
+          <tr>
+            <th>Last-Name</th>
+            <td id="iblLastName">...</td>
+          </tr>
+          <tr>
+            <th>City</th>
+            <td id="iblCity">...</td>
+          </tr>
+          <tr>
+            <th>Gender</th>
+            <td id="iblGender">...</td>
+          </tr>
+          <tr>
+            <th>Country</th>
+            <td id="iblCountry">...</td>
+          </tr>
+          <tr>
+            <th>Adult</th>
+            <td id="iblAdult">...</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirm Example</title>
+    <script type="text/javascript">
+      function openAlert() {
+        var result = confirm("This is an confirm example!!");
+        if (result) {
+          document.write("<h2>You clicked OK</h2>");
+        } else {
+          document.write("<h2>You clicked Cancel</h2>");
+        }
+      }
+    </script>
+  </head>
+  <body onload="openAlert()"></body>
+</html>

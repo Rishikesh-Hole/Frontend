@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using Query Selector</title>
+    <script type="text/javascript">
+      "use strict";
+      function bodyLoad() {
+        document.querySelector("img").src = "../imgs/Harrier.png";
+        document.querySelector("#yourImg").width = "300";
+        document.querySelector(".bntRegister").value = "Register";
+        document.querySelector(".headingEffects").style =
+          "color:red; border:2px solid green; text-align:center;background-color: yellow;";
+        document.querySelector("form #btnLogin").value = "Login";
+        document.querySelector("li:first-child").style =
+          "border:2px solid black;padding:10px;";
+        document.querySelector("li:last-child").style =
+          "border:2px solid red;padding:10px;";
+        document.querySelector("li:nth-child(2)").style =
+          "border:2px solid green;padding:10px; border-radius:10px;";
+      }
+    </script>
+  </head>
+  <body onload="bodyLoad()">
+    <div class="formEffects">
+      <img alt="Image not available" id="yourImg" />
+
+      <form>
+        <h2 class="headingEffects">Register</h2>
+        <input type="text" />
+        <input type="button" class="bntRegister" />
+      </form>
+      <form>
+        <h2>Login</h2>
+        <input type="text" />
+        <input type="button" id="btnLogin" />
+      </form>
+      <img src="../imgs/bag.PNG" alt="" />
+    </div>
+    <ul>
+      <li>First-child</li>
+      <li>Middle-2nd-child</li>
+      <li>Last-child</li>
+    </ul>
+  </body>
+</html>

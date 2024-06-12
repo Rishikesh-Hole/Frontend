@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>let variables example</title>
+    <script type="text/javascript">
+      function letDemo() {
+        //console.log(x); //ReferenceError: Cannot access 'x' before initialization // Hoisting not allowed
+        let x = 10;
+        console.log(x);
+        document.write(`<h2>outer x = ${x}</h2>`);
+
+        //let x = 30; // Shadowing in same scope not allowed
+
+        if (true) {
+          let y;
+          y = 20;
+          let x = 30; // Shadowing in different scope allowed
+          console.log(y);
+          document.write(`<h2>Innner x = ${x}</h2>`);
+          document.write(`<h2>Inner y = ${y}</h2>`);
+        }
+        document.write(`<h2>Outer x = ${x}</h2>`);
+        console.log(y); // ReferenceError: y is not defined
+      }
+
+      letDemo();
+    </script>
+  </head>
+  <body></body>
+</html>

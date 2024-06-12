@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>innerHTML Example</title>
+  </head>
+  <body>
+    <p id="GettingInnertext">This is innerHTML example - getting!!</p>
+    <h3 id="SettingInnertext"></h3>
+    <p id="SettingInnertext1"></p>
+    <script>
+      const element = document.querySelector("#GettingInnertext");
+      const textContent = element.innerHTML;
+      console.log(element);
+      console.log("Text content:" + textContent);
+      const settingEx = "This is innerHTML example - Setting";
+      document.querySelector("#SettingInnertext").innerHTML = settingEx;
+      document.querySelector("#SettingInnertext1").innerHTML =
+        "<p> Hello Rishikesh, <strong>Strong text here!!</strong></p>";
+    </script>
+  </body>
+</html>

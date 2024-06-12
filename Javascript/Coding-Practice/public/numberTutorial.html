@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number data type example</title>
+    <script type="text/javascript">
+      function numDemo() {
+        let num1 = 10;
+        let num2 = -200.256;
+        let notNumber = NaN;
+        let infiniteNumber = Infinity;
+        let NeinfiniteNumber = -Infinity;
+        document.write(`<h2>Num1 is ${num1}</h2>`);
+        document.write(`<h2>Num2 is ${num2} and of ${typeof num2} type </h2>`);
+        document.write(`<h2>Number.MAX_VALUE = ${Number.MAX_VALUE}</h2>`);
+        document.write(`<h2>Number.MIN_VALUE = ${Number.MIN_VALUE}</h2>`);
+        document.write(
+          `<h2>Number.NEGATIVE_INFINITY =  ${Number.NEGATIVE_INFINITY}</h2>`
+        );
+        document.write(
+          `<h2>Number.POSITIVE_INFINITY =  ${Number.POSITIVE_INFINITY}</h2>`
+        );
+        document.write(`<h2> 10 / 0 = ${10 / 0}</h2>`);
+        document.write(`<h2> 10 / 0 = ${-10 / 0}</h2>`);
+        document.write(
+          `<h2>Number.MAX_VALUE * 2 = ${Number.MAX_VALUE * 2}</h2>`
+        );
+        document.write(
+          `<h2> Number.isFinite(10 / 0) = ${Number.isFinite(10 / 0)}</h2>`
+        );
+        document.write(`<h2> Number.isNaN(abc) = ${Number.isNaN(0 / 0)} </h2>`);
+        document.write(`<h2> Number("abc") = ${Number("abc")}</h2>`);
+        document.write(`<h2> 0 / 0 = ${0 / 0}</h2>`);
+        document.write(`<h2> Number("123 abc") = ${Number("123 abc")}</h2>`);
+        document.write(
+          `<h2> (100.256).toFixed(2) = ${(100.256).toFixed(2)}</h2>`
+        );
+      }
+
+      numDemo();
+    </script>
+  </head>
+  <body></body>
+</html>

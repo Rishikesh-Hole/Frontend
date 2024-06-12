@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prompt</title>
+    <script type="text/javascript">
+      const name = prompt("Please enter your name: ", "Rishikesh Hole");
+      if (name == "") {
+        document.write(`You pressed OK without entering any text`);
+      } else if (name == null) {
+        document.write(`Prompt was cancelled or closed!!`);
+      } else {
+        document.write(`<h2>Hello, ${name}</h2>`);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

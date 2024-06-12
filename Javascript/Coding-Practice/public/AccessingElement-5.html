@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessing Multiple elements</title>
+    <script type="text/javascript">
+      "use strict";
+      function bodyLoad() {
+        var x = document.getElementsByTagName("img");
+        //alert("Number of images are: " + x.length);
+        x[0].src = "../imgs/Harrier.PNG";
+        x[0].style = "width:300px;";
+
+        var y = document.getElementsByClassName("bntRegister");
+
+        var z = document.getElementsByName("pic");
+        alert(
+          "Number of images are: " +
+            x.length +
+            " Number of bntRegister class usage: " +
+            y.length +
+            " Same name elements as pic: " +
+            z.length
+        );
+      }
+    </script>
+  </head>
+  <body onload="bodyLoad()">
+    <img alt="Image not available" name="pic" />
+    <img alt="Image not available" name="pic" />
+    <form name="frmRegister">
+      <h2>Register</h2>
+      <input type="text" />
+      <input type="button" class="bntRegister" />
+    </form>
+    <form>
+      <h2>Login</h2>
+      <input type="text" />
+      <input type="button" name="btnLogin" />
+    </form>
+  </body>
+</html>

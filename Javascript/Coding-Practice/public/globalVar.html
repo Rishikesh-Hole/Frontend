@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global variables</title>
+  </head>
+  <body>
+    <script>
+      var varGlobal = "var Global variable";
+      const constGlobal = "const Global variable";
+      let letGlobal = "let Global variable";
+      document.write(`<h3>${varGlobal}</h3>`);
+      document.write(`<h3>${constGlobal}</h3>`);
+      document.write(`<h3>${letGlobal}</h3>`);
+      document.write(`********* Accessing using window Object *********`);
+      document.write(`<h3>${window.varGlobal}</h3>`);
+      document.write(`<h3>${window.constGlobal}</h3>`);
+      document.write(`<h3>${window.letGlobal}</h3>`);
+    </script>
+  </body>
+</html>
