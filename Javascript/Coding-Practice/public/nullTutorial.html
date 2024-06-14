@@ -1,0 +1,22 @@
+<script>
+  document.write(`<h3> ========= Null =========</h3>`);
+  let a = null;
+  let b = 10;
+  document.write(`<h3> a is:  ${a}</h3>`);
+  document.write(`<h3> typeof a is:  ${typeof a}</h3>`);
+  if (a === null) {
+    document.write(`<h3> a is null.</h3>`);
+  }
+  if (b !== null) {
+    document.write(`<h3> b is not null.</h3>`);
+  }
+  if (a == null) {
+    //to check both NULL and undefined
+    document.write(`<h3> a is null.</h3>`);
+  }
+  document.write(`<h3> null == undefined : ${null == undefined}</h3>`);
+  document.write(`<h3> null === undefined : ${null === undefined}</h3>`);
+  document.write(`<h3> null == 0 : ${null == 0}</h3>`);
+  document.write(`<h3> null == false : ${null == false}</h3>`);
+  document.write(`<h3> null == true : ${null == true}</h3>`);
+</script>

@@ -1,0 +1,29 @@
+<script>
+  let arr1 = [10, 20, 12, "a", "rishi", 101, 502, 100];
+  document.write(`<h3> arr1 is : ${arr1.toString()}</h3>`);
+  document.write(`<h3> arr1.includes(12) : ${arr1.includes(12)}</h3>`);
+  document.write(
+    `<h3> arr1.includes("Saylee") : ${arr1.includes("Saylee")}</h3>`
+  );
+  document.write(`<h3> arr1 is : ${arr1.join(" ~ ")}</h3>`);
+
+  let arr2 = arr1.slice(3);
+  document.write(`<h3> arr2 is :   ${arr2.join(" ~ ")}</h3>`);
+  document.write(
+    `<h3> arr1.slice(1, 5).join("~") :   ${arr1.slice(1, 5).join(" ~ ")}</h3>`
+  );
+  document.write(`----------------------`);
+  arr2 = arr1.slice(3, 6);
+  for (let i = 0; i < arr2.length; i++) {
+    document.write(`<h3>${arr2[i]}</h3>`);
+  }
+  document.write(`----------------------`);
+  for (let element of arr2) {
+    document.write(`<h3>${element}</h3>`);
+  }
+  document.write(`----------------------`);
+  arr2.forEach((element, index) => {
+    document.write(`<h3>Index[${index}] : ${element}</h3>`);
+  });
+  document.write(`----------------------`);
+</script>

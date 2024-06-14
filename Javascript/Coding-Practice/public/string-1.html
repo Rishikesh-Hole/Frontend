@@ -1,0 +1,43 @@
+<script>
+  let fullName = "Rishikesh Digambar Hole";
+  document.write(`<h2> Full name is : ${fullName}</h2> `);
+  document.write(
+    `<h2> Full name toUpperCase : ${fullName.toUpperCase()}</h2> `
+  );
+  document.write(
+    `<h2> Full name toLowerCase : ${fullName.toLowerCase()}</h2> `
+  );
+
+  let message = "  Hello! Rishikesh   ";
+  document.write(`<h2> message : ${message}</h2> `);
+  document.write(`<h2> message length : ${message.length}</h2> `);
+  document.write(`<h2> message length trim : ${message.trim().length}</h2> `);
+  document.write(
+    `<h2> message length trimStart : ${message.trimStart().length}</h2> `
+  );
+  document.write(
+    `<h2> message length trimEnd : ${message.trimEnd().length}</h2> `
+  );
+
+  let str1 = "Hello, Rishikesh";
+  document.write(
+    `<h2> message str1.replace("Rishikesh", "Saylee"): ${str1.replace(
+      "Rishikesh",
+      "Saylee"
+    )}</h2> `
+  );
+  document.write(
+    `<h2> message str1.includes("Rishikesh") : ${str1.includes(
+      "Rishikesh"
+    )}</h2> `
+  );
+  document.write(
+    `<h2> message str1.startsWith("Hello"): ${str1.startsWith("Hello")}</h2> `
+  );
+  document.write(
+    `<h2> message str1.endsWith("Hole"): ${str1.endsWith("Hole")}</h2> `
+  );
+  let str2 = "Apple,Banana,Orange";
+  document.write(`${str2.split(",")}`);
+  console.log(str2.split(","));
+</script>

@@ -1,0 +1,40 @@
+<script>
+  let isTrue = true;
+  let isFalse = false;
+  document.write(`<h3>Type of isTrue is :  ${typeof isTrue}</h3>`);
+  document.write(`<h3>isFalse is :  ${isFalse}</h3>`);
+
+  document.write(`<h3> 5 > 3 is:  ${5 > 3}</h3>`);
+  document.write(`<h3> 5 === 5 is :  ${5 === 5}</h3>`);
+  document.write(`<h3> 5 !== 3 is :  ${5 !== 3}</h3>`);
+  document.write(`<h3> 5 < 3 is:  ${5 < 3}</h3>`);
+
+  document.write(`<h3> isTrue || isFalse is:  ${isTrue || isFalse}</h3>`);
+  document.write(`<h3> isTrue && isFalse is:  ${isTrue && isFalse}</h3>`);
+  document.write(`<h3> !isFalse is:  ${!isFalse}</h3>`);
+
+  document.write(`<h3> !null is is falsy:  ${!null}</h3>`);
+  document.write(`<h3> !undefined is falsy:  ${!undefined}</h3>`);
+  document.write(`<h3> !NaN is falsy:  ${!NaN}</h3>`);
+  document.write(`<h3> !0 is falsy:  ${!0}</h3>`);
+  if ({}) {
+    document.write(`<h3> Empty object {} is truthy</h3>`);
+  }
+
+  if ([]) {
+    document.write(`<h3> Empty array [] is truthy</h3>`);
+  }
+
+  if ("Rishikesh") {
+    document.write(`<h3>Non-empty string "Rishikesh" is truthy</h3>`);
+  }
+
+  if (!"") {
+    document.write(`<h3>empty string "" is falsy</h3>`);
+  }
+
+  document.write(`<h3> Boolean("Hello"):  ${Boolean("Hello")}</h3>`);
+  document.write(`<h3> Boolean(0):  ${Boolean(0)}</h3>`);
+  document.write(`<h3> !!"Hello" :  ${!!"Hello"}</h3>`);
+  document.write(`<h3> !!0 :  ${!!0}</h3>`);
+</script>

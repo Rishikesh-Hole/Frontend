@@ -1,0 +1,45 @@
+<script>
+  let arr1 = [10, 20, 30];
+  let arr2 = new Array(3);
+  let arr3 = new Array(10, 20, 30);
+  document.write(`<h3> arr1[0] is : ${arr1[0]}</h3>`);
+  document.write(`<h3> arr2[1] is : ${arr2[1]}</h3>`);
+  document.write(`<h3> arr3[2] is : ${arr3[2]}</h3>`);
+
+  document.write(`<h3> arr2 length : ${arr2.length}</h3>`);
+  document.write(`<h3> arr3 length : ${arr3.length}</h3>`);
+  arr2[1] = 200;
+  document.write(`<h3> arr2[1] is : ${arr2[1]}</h3>`);
+  arr2.push(400);
+  arr2.push(500);
+  arr2.push(600);
+  document.write(`<h3> arr2 is : ${arr2.toString()}</h3>`);
+  arr2[2] = 300;
+  arr2[0] = 100;
+  document.write(`<h3> arr2 is : ${arr2.toString()}</h3>`);
+  document.write(`<h3> arr2 length : ${arr2.length}</h3>`);
+  arr2.pop();
+  document.write(`<h3> arr2 is : ${arr2.toString()}</h3>`);
+  document.write(`<h3> arr2 length : ${arr2.length}</h3>`);
+  document.write(`<h3> arr1 is : ${arr1.toString()}</h3>`);
+  document.write(`<h3> arr3 is : ${arr3.toString()}</h3>`);
+  arr1.pop();
+  arr3.pop();
+  document.write(`<h3> arr1 is : ${arr1.toString()}</h3>`);
+  document.write(`<h3> arr3 is : ${arr3.toString()}</h3>`);
+  arr2.shift();
+  document.write(`<h3> arr2 is : ${arr2.toString()}</h3>`);
+  arr2.unshift(101);
+  document.write(`<h3> arr2 is : ${arr2.toString()}</h3>`);
+  let concatArr = arr1.concat(arr2);
+  document.write(`<h3> concatArr is : ${concatArr.toString()}</h3>`);
+  concatArr.push(101);
+  concatArr.push(200);
+  document.write(`<h3> concatArr is : ${concatArr.toString()}</h3>`);
+  document.write(
+    `<h3> concatArr.indexOf(101) is : ${concatArr.indexOf(101)}</h3>`
+  );
+  document.write(
+    `<h3> concatArr.indexOf(101) is : ${concatArr.lastIndexOf(200)}</h3>`
+  );
+</script>

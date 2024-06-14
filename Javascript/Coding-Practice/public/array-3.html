@@ -1,0 +1,36 @@
+<script>
+  let arr = [-1, 10, 20, 30, 40, 55, 10, 50, 20, 11, 13, 17];
+  let found = arr.find((x) => x > 11);
+  document.write(`<h3> find is : ${found}</h3>`);
+  let foundIndex = arr.findIndex((x) => x > 11);
+  document.write(`<h3> findIndex is : ${foundIndex}</h3>`);
+
+  let evenArr = arr.filter((x) => x % 2 === 0);
+  document.write(`<h3> evenArr is : ${evenArr}</h3>`);
+
+  let squared = arr.map((x) => x * x);
+  document.write(`<h3> squared is : ${squared}</h3>`);
+  arr.map((x) => document.write(`${x}~`));
+
+  document.write(`<h3> arr is : ${arr.toString()}</h3>`);
+  let someOdd = arr.some((x) => x % 2 === 1);
+  document.write(`<h3> someOdd is : ${someOdd}</h3>`);
+
+  let allPositive = arr.every((x) => x > 0);
+  document.write(`<h3> allPositive is : ${allPositive}</h3>`);
+
+  arr.shift();
+  document.write(`<h3> arr is : ${arr.toString()}</h3>`);
+  allPositive = arr.every((x) => x > 0);
+  document.write(`<h3> allPositive is : ${allPositive}</h3>`);
+
+  const sum = arr.reduce((accumulator, currentVal) => {
+    return accumulator + currentVal;
+  }, 0);
+  document.write(`<h3> sum is : ${sum}</h3>`);
+
+  document.write(`<h3> arr is : ${arr.toString()}</h3>`);
+  let arrDeleted = arr.splice(2, 3, "a", "b");
+  document.write(`<h3> arrDeleted is : ${arrDeleted.toString()}</h3>`);
+  document.write(`<h3> arr is : ${arr.toString()}</h3>`);
+</script>

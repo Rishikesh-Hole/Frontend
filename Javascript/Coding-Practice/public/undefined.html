@@ -1,0 +1,35 @@
+<script>
+  let x;
+  let y = undefined;
+  document.write(`<h3> ========= Undefined =========</h3>`);
+  document.write(`<h3> x is:  ${x}</h3>`);
+  document.write(`<h3> y is:  ${y}</h3>`);
+  document.write(`<h3> typeof y is:  ${typeof y}</h3>`);
+
+  let obj = { name: "Rishikesh" };
+  let arr = [1, 2, 3];
+  document.write(`<h3> obj.age is:  ${obj.age}</h3>`);
+  document.write(`<h3> arr[5] is:  ${arr[5]}</h3>`);
+  function welcome() {
+    console.log("Welcome, Rishikesh!!");
+  }
+  let result = welcome();
+  document.write(`<h3> result is:  ${result}</h3>`);
+  if (x === undefined) {
+    document.write(`<h3> x is undefined.</h3>`);
+  }
+  if (typeof x === undefined) {
+    document.write(`<h3> x is undefined.</h3>`);
+  }
+  if (x !== undefined) {
+    document.write(`<h3> x is not undefined.</h3>`);
+  }
+  let name;
+  let displayName = name || "Undefind name";
+  document.write(`<h3> name is : ${displayName}</h3>`);
+
+  let userProfile = { profile: { name: "Rishikesh" } };
+  document.write(`<h3> name is : ${userProfile.profile.name}</h3>`);
+  document.write(`<h3> name is : ${userProfile.profile?.age}</h3>`);
+  document.write(`<h3> name is : ${userProfile.profile.age}</h3>`);
+</script>
