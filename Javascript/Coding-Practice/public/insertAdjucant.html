@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>insertAdjacentElement Tutorial</title>
+    <script>
+      function insertElement(position) {
+        let newLi = document.createElement("li");
+        newLi.innerHTML = "New ietm";
+        console.log(newLi);
+        let refElement = document.querySelector("#myList");
+        console.log(refElement);
+        if (position === "beforebegin") {
+          refElement.insertAdjacentElement(position, newLi);
+        } else if (position === "afterend") {
+          refElement.insertAdjacentElement(position, newLi);
+        } else if (position === "afterbegin") {
+          refElement.insertAdjacentElement(position, newLi);
+        } else if (position === "beforeend") {
+          refElement.insertAdjacentElement(position, newLi);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <ol id="myList">
+      <li>Item - 1</li>
+      <li>Item - 2</li>
+      <li>Item - 3</li>
+      <li id="item-4">Item - 4</li>
+    </ol>
+    <hr />
+    <button type="button" onclick="insertElement('beforebegin')">
+      Insert-Before
+    </button>
+    <button type="button" onclick="insertElement('afterend')">
+      Insert-After
+    </button>
+    <button type="button" onclick="insertElement('afterbegin')">
+      Insert-First
+    </button>
+    <button type="button" onclick="insertElement('beforeend')">
+      Insert-last
+    </button>
+  </body>
+</html>

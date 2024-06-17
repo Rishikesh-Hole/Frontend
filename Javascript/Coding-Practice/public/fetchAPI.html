@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch API</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <script>
+      function loadAPI() {
+        fetch("https://fakestoreapi.com/products/category/jewelery")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Netwrok response was not OK");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            for (let item of data) {
+              let newDiv = document.createElement("div");
+              newDiv.className = " card m-2 p-2  bg-light border-danger";
+              newDiv.style.width = "200px";
+              newDiv.innerHTML = `
+              <img src=${item.image} height="200px" class="card-img-top">
+              <div class="card-header" style="height:170px"><p>${item.title}</p></div>
+              <div class="card-body"> <h3>Price: ${item.price}</h3></div>
+              <div class="card-footer"> 
+                <button class="btn btn-warning w-100"> 
+                <span class="bi bi-cart4"> </span> Add to Cart
+                </button>
+              </div>
+              `;
+              document.getElementById("catalog").appendChild(newDiv);
+            }
+          });
+      }
+    </script>
+  </head>
+  <body onload="loadAPI()">
+    <div class="card-group border-dark d-inline-flex" id="catalog"></div>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>insertAdjacentElement Tutorial</title>
+    <script>
+      function insertElement(position) {
+        const item4 = document.getElementById("item-4");
+        let refElement = document.querySelector("#myList");
+
+        if (position === "beforebegin") {
+          refElement.insertAdjacentElement(position, item4);
+        } else if (position === "afterend") {
+          refElement.insertAdjacentElement(position, item4);
+        } else if (position === "afterbegin") {
+          refElement.insertAdjacentElement(position, item4);
+        } else if (position === "beforeend") {
+          refElement.insertAdjacentElement(position, item4);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <ol id="myList">
+      <li>Item - 1</li>
+      <li>Item - 2</li>
+      <li>Item - 3</li>
+      <li id="item-4">Item - 4</li>
+    </ol>
+    <button type="button" onclick="insertElement('beforebegin')">
+      Insert-Before
+    </button>
+    <button type="button" onclick="insertElement('afterend')">
+      Insert-After
+    </button>
+    <button type="button" onclick="insertElement('afterbegin')">
+      Insert-First
+    </button>
+    <button type="button" onclick="insertElement('beforeend')">
+      Insert-last
+    </button>
+  </body>
+</html>

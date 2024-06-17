@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Element</title>
+  </head>
+  <body>
+    <div id="mainBox">
+      <img src="../imgs/welcome.PNG" alt=".." />
+    </div>
+
+    <script type="text/javascript">
+      "use strict";
+      let newDiv = document.createElement("div");
+      newDiv.setAttribute("class", "my-child-1");
+      newDiv.id = "my-child-1-id";
+      newDiv.style = "text-align:center; font-size:30px";
+      newDiv.innerHTML = "Hello Rishikesh, <strong>Welcome to JS</strong>";
+      console.log(newDiv);
+      let parent = document.getElementById("mainBox");
+      console.log(parent);
+      parent.appendChild(newDiv);
+    </script>
+  </body>
+</html>

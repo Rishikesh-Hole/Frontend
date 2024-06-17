@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>insertBefore Tutorial</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        "use strict";
+        let newLi = document.createElement("li");
+        newLi.innerHTML = "Item - 3";
+        console.log(newLi);
+
+        document.querySelector("ul").appendChild(newLi);
+        console.log(document.querySelector("ul"));
+      });
+      function moveLi() {
+        document
+          .querySelector("ul")
+          .insertBefore(
+            document.querySelector("#li-3"),
+            document.querySelector("#reference")
+          );
+        console.log(document.querySelector("ul"));
+      }
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li id="reference">Item - 1</li>
+      <li>Item - 2</li>
+    </ul>
+
+    <ol>
+      <li>Item - 1</li>
+      <li>Item - 2</li>
+      <li id="li-3">OL Item - Last</li>
+    </ol>
+
+    <button type="button" onclick="moveLi()">Click me</button>
+  </body>
+</html>
