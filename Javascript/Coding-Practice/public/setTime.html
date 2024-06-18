@@ -1,0 +1,15 @@
+<script>
+  const greet = (name = "Guest") =>
+    document.write(
+      `<h3>Welcome, ${name} <br> Current time is : ${new Date().toLocaleString()}</h3>`
+    );
+  greet();
+
+  let timeoutid = setTimeout(greet, 1000, "Rishikesh");
+
+  //clearTimeout(timeoutid); //will time
+
+  let setIntervalID = setInterval(greet, 1000, "Saylee");
+
+  setTimeout(() => clearInterval(setIntervalID), 10000);
+</script>

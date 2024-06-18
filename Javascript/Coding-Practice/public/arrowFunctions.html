@@ -1,0 +1,40 @@
+<script>
+  const add = (a, b) => a + b;
+  document.write(
+    `<h3>Multiparameter arrow function: add = (a, b) => a + b</h3>`
+  );
+  document.write(`<h3>add(10, 20) : ${add(10, 20)} </h3>`);
+
+  const square = (n) => n * n;
+
+  document.write(
+    `<h3>Single parameter arrow function: square = n => n * n</h3>`
+  );
+  document.write(`<h3>square(9) : ${square(9)} </h3>`);
+
+  let arr = ["q", "w", "r", 1, 2, 4];
+  let iterate = () => {
+    for (item of arr) {
+      document.write(`${item}`);
+    }
+  };
+  document.write(`<h3>No parameter arrow function: let iterate = () => </h3>`);
+  iterate();
+
+  const obj = {
+    name: "Rishikesh",
+    greet() {
+      const innerfunction = () => {
+        document.write(`<h3> ${this.name} </h3>`);
+      };
+      innerfunction();
+    },
+  };
+  obj.greet();
+
+  const greet = (name = "Guest") =>
+    document.write(`<h3> Welcome, ${name} </h3>`);
+
+  greet();
+  greet("Rishikesh");
+</script>

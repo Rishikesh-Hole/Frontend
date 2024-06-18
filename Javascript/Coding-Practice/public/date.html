@@ -1,0 +1,46 @@
+<script>
+  document.write(`<h3>Current date and time: ${new Date()}</h3>`);
+  document.write(
+    `<h3>Specific date and time: ${new Date(2024, 5, 10, 12, 30, 0)}</h3>`
+  );
+  document.write(`<h3>Year: ${new Date().getFullYear()}</h3>`);
+  document.write(`<h3>Day: ${new Date().getDay()}</h3>`);
+  document.write(`<h3>Date: ${new Date().getDate()}</h3>`);
+  document.write(`<h3>Hours: ${new Date().getHours()}</h3>`);
+  document.write(`<h3>Minutes: ${new Date().getMinutes()}</h3>`);
+  document.write(`<h3>Seconds: ${new Date().getSeconds()}</h3>`);
+
+  let now = new Date();
+  now.setFullYear(2023);
+  now.setMonth(11);
+  now.setDate(8);
+  now.setHours(12);
+  now.setMinutes(45);
+  now.setSeconds(15);
+  document.write(`<h3>Custom date and time: ${now}</h3>`);
+
+  let timestamp = now.getTime();
+  document.write(`<h3>Timestamp: ${timestamp}</h3>`);
+
+  document.write(`<h3>ISO String: ${now.toISOString()}</h3>`);
+  document.write(`<h3>Date String: ${now.toDateString()}</h3>`);
+  document.write(`<h3>Time String: ${now.toTimeString()}</h3>`);
+  document.write(`<h3>Locate date string: ${now.toLocaleDateString()}</h3>`);
+  document.write(`<h3>Locale time string: ${now.toLocaleTimeString()}</h3>`);
+  document.write(`<h3>Locale string: ${now.toLocaleString()}</h3>`);
+
+  document.write(`<h3>UTC full year: ${now.getUTCFullYear()}</h3>`);
+  document.write(`<h3>UTC Day: ${new Date().getUTCDay()}</h3>`);
+  document.write(`<h3>UTC Date: ${new Date().getUTCDate()}</h3>`);
+  document.write(`<h3>UTC Hours: ${new Date().getUTCHours()}</h3>`);
+  document.write(`<h3>UTC Minutes: ${new Date().getUTCMinutes()}</h3>`);
+  document.write(`<h3>UTC Seconds: ${new Date().getUTCSeconds()}</h3>`);
+
+  now.setUTCFullYear(2022);
+  now.setUTCMonth(10);
+  now.setUTCDate(7);
+  now.setUTCHours(12);
+  now.setUTCMinutes(4);
+  now.setUTCSeconds(5);
+  document.write(`<h3>Custom UTC date and time: ${now}</h3>`);
+</script>
