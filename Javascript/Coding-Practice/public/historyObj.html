@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History Object event</title>
+  </head>
+  <body>
+    <button type="button" onclick="goBack()">Go Back</button>
+    <button type="button" onclick="goForward()">Go Forward</button>
+    <button type="button" onclick="goPage()">Go page</button>
+    <hr />
+    <div id="pageStatus"></div>
+    <script>
+      function goBack() {
+        history.back();
+        test();
+      }
+      function goForward() {
+        history.forward();
+        test();
+      }
+      function goPage() {
+        history.go(-2);
+        test();
+      }
+      function test() {
+        document.getElementById("pageStatus").innerHTML = "";
+        let status = document.createElement("p");
+        status.innerHTML = `<h3>History lenght : ${history.length} <br>
+            History State : ${history.state}</h3>`;
+        document.getElementById("pageStatus").appendChild(status);
+      }
+    </script>
+  </body>
+</html>

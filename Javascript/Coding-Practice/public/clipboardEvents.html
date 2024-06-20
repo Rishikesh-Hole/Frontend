@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clipboard events</title>
+  </head>
+  <body>
+    <textarea id="textarea" cols="50" rows="10"></textarea>
+    <script>
+      document.addEventListener("copy", (event) => {
+        event.preventDefault();
+        let selectedText = window.getSelection().toString();
+        event.clipboardData.setData("text/plain", selectedText);
+        console.log(`Copied text : ${selectedText}`);
+      });
+
+      document.addEventListener("cut", (event) => {
+        event.preventDefault();
+        let selectedText = window.getSelection().toString();
+        event.clipboardData.setData("text/plain", selectedText);
+        console.log(`Cut text : ${selectedText}`);
+      });
+
+      document.addEventListener("paste", (event) => {
+        event.preventDefault();
+        let pasteData = event.clipboardData.getData("text/plain");
+        event.clipboardData.setData("text/plain", pasteData);
+        console.log(`Paste text : ${pasteData}`);
+        document.getElementById("textarea").value = pasteData;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document object tutorial</title>
+    <script>
+      window.addEventListener("load", () => {
+        document.getElementById(
+          "box-1"
+        ).innerHTML = `<h3>page is fully loaded</h3>`;
+      });
+
+      window.addEventListener("beforeunload", (event) => {
+        event.preventDefault();
+        event.returnValue = "";
+      });
+      //   window.addEventListener("unload", () => { // deprecated
+      //     document.getElementById(
+      //       "box-1"
+      //     ).innerHTML = `<h3>page is unloading</h3>`;
+      //   });
+    </script>
+  </head>
+  <body>
+    <script>
+      document.write(`<h3>Document title: ${document.title}</h3>`);
+      document.write(`<h3>Document URL: ${document.URL}</h3>`);
+      document.write(`<h3>Document Domain: ${document.domain}</h3>`);
+      document.write(`<h3>Document referrer: ${document.referrer}</h3>`);
+      document.write(`<h3>Document readyState: ${document.readyState}</h3>`);
+      document.write(`<h3>Document head: ${document.head}</h3>`);
+      document.body.style.backgroundColor = "lightblue";
+      document.write(`<h3>Document body: ${document.body}</h3>`);
+      document.cookie = "User-name: Rishikesh";
+      document.write(`<h3>Document cookie: ${document.cookie}</h3>`);
+    </script>
+    <hr />
+    <div id="box-1"></div>
+  </body>
+</html>

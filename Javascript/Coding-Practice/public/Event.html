@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event properties</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        "use strict";
+
+        const element = document.getElementById("btn-1");
+        let item = document.createElement("h3");
+        let item1 = document.createElement("h3");
+        let item2 = document.createElement("h3");
+
+        element.addEventListener("click", (event) => {
+          item.innerHTML = `Event type : ${event.type} <br>
+          Event target: ${event.target} <br>
+          Event current target: ${event.currentTarget} <br>
+          Event Timestamp: ${event.timeStamp} <br>
+          Event button: ${event.button} <br>
+          Event Bubble: ${event.bubbles} <br>
+          Is Event cancelable: ${event.cancelable} <br>
+          Is preventDefault called on Event? : ${event.defaultPrevented} <br>
+          Screen coordinators in viewport: X(${event.screenX}), Y(${event.screenY}) <br>
+          Screen coordinators in document : X(${event.pageX}), Y(${event.pageY}) `;
+          document.getElementById("box").appendChild(item);
+        });
+        element.addEventListener("mouseover", (event) => {
+          item1.innerHTML = `Event related target : ${event.relatedTarget}`;
+          document.getElementById("box-1").appendChild(item1);
+        });
+
+        document.addEventListener("mousemove", (event) => {
+          item2.innerHTML = `Document Screen coordinators  : X(${event.clientX}), Y(${event.clientY})`;
+          document.getElementById("box-1").appendChild(item2);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="btn-1">Click here</button> <br />
+    <hr />
+    <div id="box"></div>
+    <hr />
+    <div id="box-1"></div>
+  </body>
+</html>

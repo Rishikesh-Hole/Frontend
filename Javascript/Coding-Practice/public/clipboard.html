@@ -1,0 +1,13 @@
+<script>
+  document.write(`<h3>Hello Rishikesh and Saylee</h3>`);
+
+  navigator.clipboard
+    .writeText("Hello Rishikesh and Saylee")
+    .then(() => console.log("text copied to clipboard."))
+    .catch((error) => console.log("Error while copying to clipboard."));
+
+  navigator.clipboard
+    .readText()
+    .then((text) => console.log(`Clipboard content: ${text}`))
+    .catch((error) => console.log("Couldn't read the clipboard content."));
+</script>

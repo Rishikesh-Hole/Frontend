@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="box-1"></div>
+    <hr />
+    <div id="box-2"></div>
+    <button id="btn-1" onclick="clearWatch()" value="start">
+      Start watching location
+    </button>
+    <hr />
+    <script>
+      document.write(`<h3>Navigator userAgent : ${navigator.userAgent}</h3>`);
+      document.write(
+        `<h3>Navigator appCodeName : ${navigator.appCodeName}</h3>`
+      );
+      document.write(`<h3>Navigator appName : ${navigator.appName}</h3>`);
+      document.write(`<h3>Navigator appVersion : ${navigator.appVersion}</h3>`);
+      document.write(`<h3>Navigator platform : ${navigator.platform}</h3>`);
+      document.write(`<h3>Navigator language : ${navigator.language}</h3>`);
+      document.write(
+        `<h3>Navigator cookieEnabled : ${navigator.cookieEnabled}</h3>`
+      );
+      document.write(
+        `<h3>Navigator Java Enabled : ${navigator.javaEnabled()}</h3>`
+      );
+
+      navigator.geolocation.getCurrentPosition((obj) => {
+        document.getElementById(
+          "box-1"
+        ).innerHTML = `<h3>longitude : ${obj.coords.longitude} <br> latitude : ${obj.coords.latitude}</h3>`;
+      });
+
+      const btn = document.getElementById("btn-1");
+      let watchID;
+      function clearWatch() {
+        if (btn.value === "start") {
+          watchID = navigator.geolocation.watchPosition((obj) => {
+            document.getElementById(
+              "box-2"
+            ).innerHTML = `<h3>longitude : ${obj.coords.longitude} <br>latitude : ${obj.coords.latitude}</h3>`;
+          });
+          document.getElementById("btn-1").value = "stop";
+          document.getElementById("btn-1").innerHTML = "Stop Watching location";
+          return;
+        }
+        if (btn.value === "stop") {
+          navigator.geolocation.clearWatch(watchID);
+          document.getElementById(
+            "box-2"
+          ).innerHTML = `<h3>We have stopped watching your location!!</h3>`;
+          document.getElementById("btn-1").value = "start";
+          document.getElementById("btn-1").innerHTML =
+            "Start Watching location";
+          return;
+        }
+      }
+    </script>
+  </body>
+</html>

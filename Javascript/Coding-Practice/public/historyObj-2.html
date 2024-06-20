@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button type="button" onclick="goPushState()">Push State</button>
+    <button type="button" onclick="goReplaceState()">Replace state</button>
+    <button type="button" onclick="goShowState()">Show State</button>
+    <hr />
+    <button type="button" onclick="goBack()">Go Back</button>
+    <button type="button" onclick="goForward()">Go Forward</button>
+    <button type="button" onclick="goPage()">Go page</button>
+    <hr />
+    <div id="pageStatus"></div>
+    <script>
+      function goPushState() {
+        history.pushState({ page: 1 }, "Page 1", "historyObj.html");
+      }
+      function goReplaceState() {
+        history.replaceState({ page: 2 }, "Page 2", "home.html");
+      }
+      function goShowState() {
+        showState();
+      }
+      function showState() {
+        document.getElementById("pageStatus").innerHTML = "";
+        let status = document.createElement("p");
+        status.innerHTML = `<h3>History lenght : ${history.length} <br>
+            History State : ${history.state}</h3>`;
+        document.getElementById("pageStatus").appendChild(status);
+        //console.log(history.state);
+      }
+
+      function goBack() {
+        history.back();
+      }
+      function goForward() {
+        history.forward();
+      }
+      function goPage() {
+        history.go(-2);
+      }
+      window.addEventListener("popstate", () => {
+        console.log("Pop State event.");
+      });
+    </script>
+  </body>
+</html>
