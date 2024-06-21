@@ -1,0 +1,18 @@
+<script>
+  document.write(`<h3>Higher order function</h3>`);
+
+  function sayHello() {
+    return "Hello";
+  }
+
+  function sayHi() {
+    return "Hi";
+  }
+
+  function greetings(greet) {
+    return greet();
+  }
+
+  document.write(`<h3>greetings(sayHello) : ${greetings(sayHello)}</h3>`);
+  document.write(`<h3>greetings(sayHi) : ${greetings(sayHi)}</h3>`);
+</script>

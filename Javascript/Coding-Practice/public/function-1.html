@@ -1,0 +1,27 @@
+<script>
+  document.write(`<h3>Function expression </h3>`);
+  const greet = function (name = "Rishikesh") {
+    document.write(`Hello ${name}`);
+  };
+  greet();
+
+  function add(a, b) {
+    return [a, b, "isequal to:", a + b];
+  }
+  document.write(`<h3>add(10,20) : ${add(10, 20)} </h3>`);
+
+  function sum(...numbers) {
+    return numbers.reduce((acc, num) => acc + num, 0);
+  }
+  document.write(`<h3>sum(10,20,30) : ${sum(10, 20, 30)} </h3>`);
+  document.write(`<h3>sum(10,20,30,40) : ${sum(10, 20, 30, 40)} </h3>`);
+  document.write(`<h3>sum(10,20,30,50,60) : ${sum(10, 20, 30, 50, 60)} </h3>`);
+
+  function multiplySum(a, ...numbers) {
+    return numbers.reduce((acc, num) => acc + num, 0) * a;
+  }
+  document.write(`<h3>multiplySum(2,20,30) : ${multiplySum(2, 20, 30)} </h3>`);
+  document.write(
+    `<h3>multiplySum(3,20,30,40) : ${multiplySum(3, 20, 30, 40)} </h3>`
+  );
+</script>

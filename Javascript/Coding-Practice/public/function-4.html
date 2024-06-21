@@ -1,0 +1,27 @@
+<script>
+  document.write(`<h3>Function recursion</h3>`);
+
+  function factorial(number) {
+    if (number === 0) {
+      return 1;
+    }
+    return number * factorial(number - 1);
+  }
+
+  document.write(`<h3>factorial(5) : ${factorial(5)}</h3>`);
+  document.write(`<h3>factorial(6) : ${factorial(7)}</h3>`);
+
+  document.write(`<h3>Function properties</h3>`);
+  document.write(`<h3>function name : ${factorial.name}</h3>`);
+  document.write(
+    `<h3>Function length i.e. number of argument : ${factorial.length}</h3>`
+  );
+  document.write(`<h3>function toString() : ${factorial.toString()}</h3>`);
+
+  document.write(`<h3>Function methods</h3>`);
+  let result = factorial.call(null, 5);
+  document.write(`<h3>call method - result : ${result}</h3>`);
+
+  result = factorial.bind(null, 5);
+  document.write(`<h3>bind method - result() : ${result()}</h3>`);
+</script>

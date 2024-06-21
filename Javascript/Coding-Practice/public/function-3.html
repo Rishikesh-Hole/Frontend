@@ -1,0 +1,16 @@
+<script>
+  document.write(`<h3>Function composition</h3>`);
+
+  function addOne(number) {
+    return number + 1;
+  }
+
+  function multiplyByTwo(number) {
+    return number * 2;
+  }
+
+  const composedFunction = (input) => multiplyByTwo(addOne(input));
+
+  document.write(`<h3>composedFunction(2) : ${composedFunction(2)}</h3>`);
+  document.write(`<h3>composedFunction(3) : ${composedFunction(3)}</h3>`);
+</script>
